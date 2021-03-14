@@ -31,6 +31,8 @@ def checkout():
         logger.log(str(e))
         messager.send_fail(str(e))
         raise e
+    else:
+        os.chdir(current_working_dir)
 
 
 def update_project():
